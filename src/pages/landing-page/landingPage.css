@@ -1,0 +1,268 @@
+@import url("https://jatayui.netlify.app/comp-lib.css");
+/* ---------comp-lib----- */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400;1,500&display=swap");
+
+:root {
+  --primary-color: #20d0ff;
+  --secondary-color: #7ed957;
+  --icon-color: #696b79;
+  --standard-margin: 0.5rem;
+  --small-margin: 0.2rem;
+  --large-margin: 1rem;
+  --shop-btn-hover: #06b6d4;
+  --footer-clr: #eaeaec;
+}
+
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.nav-bar {
+  /* padding: 0.5rem; */
+  margin-bottom: var(--standard-margin);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: nav;
+}
+
+.ecom-logo {
+  height: 4rem;
+  width: 4rem;
+  margin: 0.25rem;
+}
+
+.ecom-heading {
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0.25rem;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+.nav-logo-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-search {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin: var(--standard-margin);
+}
+
+.small-btn {
+  font-size: 1.1rem;
+  padding: 0.4rem;
+  background-color: white;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.nav-components {
+  display: flex;
+  align-items: center;
+  margin: var(--standard-margin);
+}
+
+.nav-links {
+  text-decoration: none;
+  margin: var(--standard-margin);
+  color: var(--icon-color);
+  font-size: 1.1rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  border-bottom: 2px solid white;
+}
+
+.nav-links:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.active {
+  color: var(--secondary-color);
+}
+
+.ecomm-main {
+  grid-area: main;
+}
+.carousel-container {
+  height: 25rem;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 100% 25rem;
+  background: rgb(32, 208, 255);
+  background: linear-gradient(
+    101deg,
+    rgba(32, 208, 255, 1) 0%,
+    rgba(126, 217, 87, 1) 100%
+  );
+}
+
+.carousel-info {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 90%;
+}
+
+.carousel-heading {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+.btn-carousel {
+  background-color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.btn-carousel:hover {
+  background-color: var(--shop-btn-hover);
+  border-color: var(--shop-btn-hover);
+}
+
+.ecomm-sub-container {
+  margin: var(--standard-margin);
+  text-align: center;
+
+}
+
+.ecom-sub-heading {
+  font-size: 2rem;
+  font-weight: 200;
+  text-decoration: none;
+  text-align: center;
+  border-bottom: 4px solid var(--primary-color);
+}
+.ecomm-categories {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.category-cards {
+  padding: 0.5rem;
+  display: flex;
+  flex-flow: row;
+  margin: var(--large-margin);
+  gap: 0.5rem;
+  width: 17.5rem;
+}
+
+.category-img {
+  width: 50%;
+}
+
+.category-heading {
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+.category-info {
+  margin: var(--standard-margin);
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.category-btn {
+  text-align: right;
+}
+
+.close-btn:hover
+{
+  color: var(--secondary-color);
+}
+.ecom-footer {
+  background-color: var(--footer-clr);
+}
+
+@media screen and (max-width: 800px) {
+  .nav-bar {
+    justify-content: center;
+    width: 80%;
+  }
+
+  .nav-search {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    margin: var(--standard-margin);
+  }
+
+  .small-btn {
+    padding: 0.1rem;
+    font-size: 0.75rem;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid white;
+  }
+
+  .search-bar {
+    padding: 0.1rem;
+    outline: none;
+    border: none;
+    font-size: 0.75rem;
+    border-bottom: 2px solid var(--primary-color);
+    margin: var(--standard-margin);
+  }
+
+  .nav-links {
+    font-size: 0.75rem;
+  }
+
+  .ecomm-categories {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    gap: 0.1rem;
+  }
+
+  .category-cards {
+    padding: 0.2rem;
+    display: flex;
+    flex-flow: row;
+    gap: 0.5rem;
+    width: 17.5rem;
+    margin: 1rem 0 1rem 0;
+  }
+}
