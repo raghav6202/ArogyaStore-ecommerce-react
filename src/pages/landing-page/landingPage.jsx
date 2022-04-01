@@ -78,7 +78,7 @@ return(
 
                 <a href="https://twitter.com/r_a___v" className="small-icons"><i className="fi-xnsuxl-twitter-solid"></i></a>
 
-                <a href="https://www.linkedin.com/in/raghav-chandra-vs-33575218b/" className="small-icons"></a>
+                <a href="https://www.linkedin.com/in/raghav-chandra-vs-33575218b/" className="small-icons">Linkedin</a>
 
 
             </div>
