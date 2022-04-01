@@ -20,6 +20,7 @@ const CategoryProvider = ({ children }) => {
       } catch (error) {
         console.error(error);
       }
+      
     };
 
     listOfCategory();
