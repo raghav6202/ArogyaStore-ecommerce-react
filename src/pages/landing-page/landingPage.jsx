@@ -96,4 +96,4 @@ return(
 
 
 
-            export {LandingPage};
+        export default LandingPage;
