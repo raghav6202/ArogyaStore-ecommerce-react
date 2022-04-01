@@ -8,20 +8,33 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
+    categoryName: "Medicines",
     description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+      "Get Medicenes at affordable prices.Shop Now and get discounts upto 20%",
+      img: " https://images.pexels.com/photos/3683088/pexels-photo-3683088.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
+    categoryName: "Tests",
     description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+      "Diagnostic tests done at youe doorstep.Book Now and get discounts upto 30%",
+      img: "https://images.pexels.com/photos/8442443/pexels-photo-8442443.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500 ",
   },
   {
     _id: uuid(),
-    categoryName: "horror",
+    categoryName: "Med-Tech",
     description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+      "Get premium quality health monitoring devices.Book Now and get discounts upto 30%",
+      img: "https://images.pexels.com/photos/6753425/pexels-photo-6753425.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-6753425.jpg&fm=jpg ",
   },
+
+  {
+    _id: uuid(),
+    categoryName: "Rehab",
+    description:
+      "Get natural health products and exercise equipments.Book Now and get discounts upto 20%",
+      img: "https://images.pexels.com/photos/8795582/pexels-photo-8795582.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500 ",
+  },
+
+
 ];
