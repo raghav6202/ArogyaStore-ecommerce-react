@@ -1,11 +1,9 @@
 import { createContext, useContext, useEffect, useState } from "react";
 const axios = require("axios").default;
 
-
-
 const defaultValue = null;
 
-const contextOfCategories = createContext(defaultValue);
+const ContextOfCategories = createContext(defaultValue);
 
 const CategoryProvider = ({ children }) => {
   const [categoryList, setCategory] = useState([]);
@@ -16,24 +14,22 @@ const CategoryProvider = ({ children }) => {
         const res = await axios.get("/api/categories");
 
         setCategory(res.data.categories);
-        
       } catch (error) {
         console.error(error);
       }
-      
     };
 
     listOfCategory();
   }, []);
 
   return (
-    <contextOfCategories.Provider value={{ categoryList, setCategory }}>
+    <ContextOfCategories.Provider value={{ categoryList, setCategory }}>
       {children}
-    </contextOfCategories.Provider>
+    </ContextOfCategories.Provider>
   );
 };
 
 // custom hook
-const useCategory = () => useContext(contextOfCategories);
+const useCategory = () => useContext(ContextOfCategories);
 
 export { useCategory, CategoryProvider };
