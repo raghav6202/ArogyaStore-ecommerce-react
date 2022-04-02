@@ -1,30 +1,68 @@
 import { v4 as uuid } from "uuid";
 
-/**
- * Product Database can be added here.
- * You can add products of your wish with different attributes
- * */
 
 export const products = [
   {
     _id: uuid(),
-    title: "You Can WIN",
-    author: "Shiv Khera",
-    price: "5000",
-    categoryName: "non-fiction",
+    name: "AZITHRAL",
+    seller: "UNO PHARMA",
+    price: 120,
+    categoryName: "Medicines",
   },
   {
     _id: uuid(),
-    title: "You are Winner",
-    author: "Junaid Qureshi",
-    price: "3000",
-    categoryName: "horror",
+    title: "FABI-FLU",
+    seller: "SPARSH PHARMA",
+    price: 400,
+    categoryName: "Medicines",
   },
   {
     _id: uuid(),
-    title: "Think and Grow Rich",
-    author: "Shiv Khera",
-    price: "1000",
-    categoryName: "fiction",
+    title: "CORONIL",
+    seller: "PTANJALI",
+    price: 250,
+    categoryName: "Medicines",
+  },
+  {
+    _id: uuid(),
+    title: "ARM-SLING",
+    seller: "ALIMED",
+    price: 850,
+    categoryName: "Rehab",
+  },
+  {
+    _id: uuid(),
+    title: "WHEEL CHAIR",
+    seller: "MEDI MART",
+    price: 5000,
+    categoryName: "Rehab",
+  },
+  {
+    _id: uuid(),
+    title: "PULSE OXIMETER",
+    seller: "MEDSURE",
+    price: 1000,
+    categoryName: "Med-Tech",
+  },
+  {
+    _id: uuid(),
+    title: "SPHYGMOMANO METER",
+    seller: "MEDSURE",
+    price: 3000,
+    categoryName: "Med-Tech",
+  },
+  {
+    _id: uuid(),
+    title: "SYRINGE",
+    seller: "G.S.K",
+    price: 50,
+    categoryName: "Med-Tech",
+  },
+  {
+    _id: uuid(),
+    title: "SPHYGMOMANO METER",
+    seller: "MEDSURE",
+    price: 3000,
+    categoryName: "Med-Tech",
   },
 ];
