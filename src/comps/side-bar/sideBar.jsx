@@ -177,4 +177,6 @@ const SideBar = () =>
     );
 
 
-}
+};
+
+export {SideBar};
