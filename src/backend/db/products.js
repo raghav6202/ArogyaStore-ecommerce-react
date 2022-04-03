@@ -1,30 +1,77 @@
 import { v4 as uuid } from "uuid";
 
-/**
- * Product Database can be added here.
- * You can add products of your wish with different attributes
- * */
 
 export const products = [
   {
     _id: uuid(),
-    title: "You Can WIN",
-    author: "Shiv Khera",
-    price: "5000",
-    categoryName: "non-fiction",
+    name: "AZITHRAL",
+    seller: "UNO PHARMA",
+    price: 120,
+    categoryName: "Medicines",
+    image:"https://admin.davagenie.com/assets/images/product/7110_1.png" ,
+    rating: 3,
   },
   {
     _id: uuid(),
-    title: "You are Winner",
-    author: "Junaid Qureshi",
-    price: "3000",
-    categoryName: "horror",
+    title: "FABI-FLU",
+    seller: "SPARSH PHARMA",
+    price: 400,
+    categoryName: "Medicines",
+    image:"https://www.netmeds.com/images/product-v1/600x600/921074/fabiflu_400_tablet_17s_0_0.jpg" ,
+    rating: 4.5,
   },
   {
     _id: uuid(),
-    title: "Think and Grow Rich",
-    author: "Shiv Khera",
-    price: "1000",
-    categoryName: "fiction",
+    title: "CORONIL",
+    seller: "PTANJALI",
+    price: 250,
+    categoryName: "Medicines",
+    image:"https://n3.sdlcdn.com/imgs/j/k/n/Patanjali-Coronil-KIT-Tablet-1-SDL928674849-3-ad453.jpg" ,
+    rating: 5,
   },
+  {
+    _id: uuid(),
+    title: "ARM-SLING",
+    seller: "ALIMED",
+    price: 850,
+    categoryName: "Rehab",
+    image:"https://m.media-amazon.com/images/I/61gT8MuftXL._SY679_.jpg" ,
+    rating: 3.5,
+  },
+  {
+    _id: uuid(),
+    title: "WHEEL CHAIR",
+    seller: "MEDI MART",
+    price: 5000,
+    categoryName: "Rehab",
+    image:"https://5.imimg.com/data5/TW/UB/MY-2224653/basic-wheelchair-red-500x500.jpg" ,
+    rating: 4,
+  },
+  {
+    _id: uuid(),
+    title: "PULSE OXIMETER",
+    seller: "MEDSURE",
+    price: 1000,
+    categoryName: "Med-Tech",
+    image:"https://n2.sdlcdn.com/imgs/j/r/2/db-enbloc-PULSE-OXIMETER-MAKE-SDL217883061-1-815e3.jpg",
+    rating: 2,
+  },
+  {
+    _id: uuid(),
+    title: "SPHYGMOMANO METER",
+    seller: "MEDSURE",
+    price: 3000,
+    categoryName: "Med-Tech",
+    image:"https://sc02.alicdn.com/kf/H6edae661e80e462da395b6466de997b8o/230093207/H6edae661e80e462da395b6466de997b8o.jpg_.webp" ,
+    rating: 4,
+  },
+  // {
+  //   _id: uuid(),
+  //   title: "SYRINGE",
+  //   seller: "G.S.K",
+  //   price: 50,
+  //   categoryName: "Med-Tech",
+  //   image:"https://5.imimg.com/data5/SELLER/Default/2021/6/MQ/SY/TI/21284661/syringe-with-needle-2ml-22g-23g-24g-500x500.jpg" ,
+  // },
+
 ];
