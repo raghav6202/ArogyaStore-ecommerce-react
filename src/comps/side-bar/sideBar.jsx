@@ -143,13 +143,13 @@ function SideBar ()
 
 
   <div className="filter-component">
-    <div className="filter-title">Ratings</div>
+    <div className="filter-title">RATINGS</div>
 
     <div className="filter-list">
       <label for="rating-box">
-        0<div className="glowing-star"><i className="fi-xnsuxl-star-solid"></i></div>
+        0<div className="glowing-star">⭐</div>
         <input type="range" name="rating" id="rating-box" />
-        5<div className="glowing-star"><i className="fi-xnsuxl-star-solid"></i></div>
+        5<div className="glowing-star">⭐</div>
       </label>
     </div>
   </div>
