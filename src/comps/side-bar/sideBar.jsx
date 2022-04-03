@@ -1,8 +1,12 @@
 
 import "./sideBar.css";
 
+import {useFilter } from "./../../context/filter.context.jsx"
+
 function SideBar () 
 {
+
+const {state , dispatch} = useFilter()
 
   return(
 <aside className="side-bar" >
@@ -17,9 +21,12 @@ function SideBar ()
       <label for="radio-1">
         <input
           type="radio"
-          name="low to high"
+          name="price_sort"
           className="radio"
           id="radio-1"
+          checked={state.priceSort === "low_to_high"}
+          value={state.priceSort}
+          onClick={() => dispatch( {type:"Low_to_High", payload: null,})}
         />
         Low To High
       </label>
@@ -27,73 +34,19 @@ function SideBar ()
       <label for="radio-2">
         <input
           type="radio"
-          name="low to high"
+          name="price_sort"
           className="radio"
           id="radio-2"
+          checked={state.priceSort === "high_to_low" }
+          value={state.priceSort}
+          onClick={() => dispatch({type:"High_to_Low" , payload: null,})}
         />
         High To Low
       </label>
     </div>
   </div>
 
-  <div className="filter-component">
-    <div className="filter-title">BRANDS</div>
 
-    <div className="filter-list">
-      <label for="cbox-1"
-        ><input id="cbox-1" name="checkbox" type="checkbox" />ALL</label
-      >
-      <label for="cbox-2"
-        ><input
-          id="cbox-2"
-          name="checkbox"
-          type="checkbox"
-        />G.S.K</label
-      ><label for="cbox-3"
-        ><input
-          id="cbox-3"
-          name="checkbox"
-          type="checkbox"
-        />DR.REDDYS</label
-      ><label for="cbox-4"
-        ><input
-          id="cbox-4"
-          name="checkbox"
-          type="checkbox"
-        />PFIZER</label
-      ><label for="cbox-5"
-        ><input
-          id="cbox-5"
-          name="checkbox"
-          type="checkbox"
-        />MEDTRONIC</label
-      ><label for="cbox-6"
-        ><input
-          id="cbox-6"
-          name="checkbox"
-          type="checkbox"
-        />ASTRA-ZENECA</label
-      ><label for="cbox-7"
-        ><input
-          id="cbox-7"
-          name="checkbox"
-          type="checkbox"
-        />CIPLA</label
-      ><label for="cbox-8"
-        ><input
-          id="cbox-8"
-          name="checkbox"
-          type="checkbox"
-        />SANOFI</label
-      ><label for="cbox-9"
-        ><input
-          id="cbox-9"
-          name="checkbox"
-          type="checkbox"
-        />PHILIPS</label
-      >
-    </div>
-  </div>
 
   <div className="filter-component">
     <div className="filter-title">CATEGORIES</div>
