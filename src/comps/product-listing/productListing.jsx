@@ -20,7 +20,9 @@ const ProductListing = ()  => {
 
                 <div className="ecomm vertical-card">
 
-                { itemList.map( ({title , seller ,price,categoryName,image}) => { 
+                { itemList.map( ({title , seller ,price,categoryName,image}) => 
+                { 
+                    return(
                     <><div className="vertical-card-image">
                         <img
                             src={image}
@@ -32,7 +34,7 @@ const ProductListing = ()  => {
                         <div className="card-price">₹.{price}</div>
                         <button className="btn-cart btn">ADD TO CART</button></>
          
-            } )} 
+         )} )} 
 
 
        </div>

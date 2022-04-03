@@ -1,35 +1,47 @@
 import "./productPage.css"
 
-import {useProduct, SideBar , ProductListing} from "./index.js"
+import {useProduct, SideBar , ProductListing} from "./index.jsx"
 
 
 
-const ProductPage = () =>
-{
+// const ProductPage = () =>
+// {
 
-  const { itemList} = useProduct()
+//   const { itemList} = useProduct()
 
-    return
-    (
+//     return
+//     (
 
-        <><div class="ecomm-sub-container">
-        <a class="ecom-sub-heading" href="./../index.html">
-          <span class="primary-color">Arogya</span><span class="secondary-color"> Products {itemList.length}</span>
-        </a>
-      </div><div class="listing-page">
+//         <><div class="ecomm-sub-container">
+//         <a class="ecom-sub-heading" href="./../index.html">
+//           <span class="primary-color">Arogya</span><span class="secondary-color"> Products {itemList.length}</span>
+//         </a>
+//       </div><div class="listing-page">
 
 
 
-          {/* side-bar-starts */}
+        
 
-          <SideBar />
+//           <SideBar />
 
-          {/* <!-- -----side-bar-ends------------ -->
+       
+//           <ProductListing />
+//         </div></>
+//     );
+// }
 
-    <!-- -----main-bar-starts------------ --> */}
-          <ProductListing />
-        </div></>
-    );
-}
+
+const ProductPage = () =>(<><div class="ecomm-sub-container">
+  <a class="ecom-sub-heading" href="./../index.html">
+    <span class="primary-color">Arogya</span><span class="secondary-color"> Products</span>
+  </a>
+</div><div class="listing-page">
+    <SideBar />
+
+    <ProductListing />
+  </div></>
+)
+
+
 
 export {ProductPage}
