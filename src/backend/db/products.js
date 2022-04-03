@@ -9,6 +9,7 @@ export const products = [
     price: 120,
     categoryName: "Medicines",
     image:"https://admin.davagenie.com/assets/images/product/7110_1.png" ,
+    rating: 3,
   },
   {
     _id: uuid(),
@@ -17,6 +18,7 @@ export const products = [
     price: 400,
     categoryName: "Medicines",
     image:"https://www.netmeds.com/images/product-v1/600x600/921074/fabiflu_400_tablet_17s_0_0.jpg" ,
+    rating: 4.5,
   },
   {
     _id: uuid(),
@@ -25,6 +27,7 @@ export const products = [
     price: 250,
     categoryName: "Medicines",
     image:"https://n3.sdlcdn.com/imgs/j/k/n/Patanjali-Coronil-KIT-Tablet-1-SDL928674849-3-ad453.jpg" ,
+    rating: 5,
   },
   {
     _id: uuid(),
@@ -33,6 +36,7 @@ export const products = [
     price: 850,
     categoryName: "Rehab",
     image:"https://m.media-amazon.com/images/I/61gT8MuftXL._SY679_.jpg" ,
+    rating: 3.5,
   },
   {
     _id: uuid(),
@@ -41,6 +45,7 @@ export const products = [
     price: 5000,
     categoryName: "Rehab",
     image:"https://5.imimg.com/data5/TW/UB/MY-2224653/basic-wheelchair-red-500x500.jpg" ,
+    rating: 4,
   },
   {
     _id: uuid(),
@@ -48,7 +53,8 @@ export const products = [
     seller: "MEDSURE",
     price: 1000,
     categoryName: "Med-Tech",
-    image:"https://n2.sdlcdn.com/imgs/j/r/2/db-enbloc-PULSE-OXIMETER-MAKE-SDL217883061-1-815e3.jpg" ,
+    image:"https://n2.sdlcdn.com/imgs/j/r/2/db-enbloc-PULSE-OXIMETER-MAKE-SDL217883061-1-815e3.jpg",
+    rating: 2,
   },
   {
     _id: uuid(),
@@ -57,6 +63,7 @@ export const products = [
     price: 3000,
     categoryName: "Med-Tech",
     image:"https://sc02.alicdn.com/kf/H6edae661e80e462da395b6466de997b8o/230093207/H6edae661e80e462da395b6466de997b8o.jpg_.webp" ,
+    rating: 4,
   },
   // {
   //   _id: uuid(),

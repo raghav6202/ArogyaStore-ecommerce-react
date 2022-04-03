@@ -20,7 +20,7 @@ const ProductListing = ()  => {
 
               
 
-                { itemList.map( ({title , seller ,price,categoryName,image}) => 
+                { itemList.map( ({title , seller ,price,categoryName,image,rating}) => 
                 { 
                     return(
                         <div className="ecomm vertical-card">
@@ -28,7 +28,7 @@ const ProductListing = ()  => {
                         <img
                             src={image}
                             alt="card-pic" />
-                    </div><div className="vertical-badge">NEW!</div><button className="close-btn">
+                    </div><div className="vertical-badge">{rating} ⭐</div><button className="close-btn">
                             <i className="fi-xwluxl-heart-wide"></i>
                         </button><div className="card-heading">{title}</div>
                         <div className="card-text">Sold By:{seller}</div>
