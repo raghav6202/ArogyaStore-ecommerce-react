@@ -10,16 +10,22 @@ const ProductProvider = ({ children }) => {
 
   useEffect(() => {
     const obtainProductList = async () => {
-      const res = await axios.get("/api/products");
+      try{
+        const res = await axios.get("/api/products");
 
-      setItemList(res.data.products);
-      console.log("use effect working");
+        setItemList(res.data.products);
+      }
+   catch(error)
+   {
+     console.error(error)
+   }
+    
     };
     obtainProductList();
   }, []);
 
   return (
-    <ContextOfProducts.Provider value={{}}>
+    <ContextOfProducts.Provider value={ {itemList,setItemList} }>
       {children}
     </ContextOfProducts.Provider>
   );

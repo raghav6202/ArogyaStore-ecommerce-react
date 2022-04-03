@@ -18,12 +18,13 @@ const ProductListing = ()  => {
             <div className="product-grid">
              
 
-                <div className="ecomm vertical-card">
+              
 
                 { itemList.map( ({title , seller ,price,categoryName,image}) => 
                 { 
                     return(
-                    <><div className="vertical-card-image">
+                        <div className="ecomm vertical-card">
+                    <div className="vertical-card-image">
                         <img
                             src={image}
                             alt="card-pic" />
@@ -32,12 +33,13 @@ const ProductListing = ()  => {
                         </button><div className="card-heading">{title}</div>
                         <div className="card-text">Sold By:{seller}</div>
                         <div className="card-price">₹.{price}</div>
-                        <button className="btn-cart btn">ADD TO CART</button></>
+                        <button className="btn-cart btn">ADD TO CART</button>
+                        </div>
          
          )} )} 
 
 
-       </div>
+    
 
 
                 <div className="ecomm vertical-card">

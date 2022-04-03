@@ -10,13 +10,13 @@ makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
-        <CategoryProvider>
+     
     <ProductProvider>
-
+    <CategoryProvider>
     <App />
-  
+    </CategoryProvider>
    </ProductProvider>
-   </CategoryProvider>
+  
   </React.StrictMode>,
   document.getElementById("root")
 );

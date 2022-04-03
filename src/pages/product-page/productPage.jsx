@@ -31,6 +31,7 @@ import {useProduct, SideBar , ProductListing} from "./index.jsx"
 // }
 
 
+
 const ProductPage = () =>(<><div class="ecomm-sub-container">
   <a class="ecom-sub-heading" href="./../index.html">
     <span class="primary-color">Arogya</span><span class="secondary-color"> Products</span>
