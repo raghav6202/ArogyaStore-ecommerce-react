@@ -16,7 +16,10 @@ const filterReducerFn = (state , action) =>
     {
 case "category":
     return{ ...state , category: state.category.include(action.payload) ? state.category.filter((item) => item !== action.payload) : [ ...state.category, action.payload] }
-break;
+
+
+case "all":
+    return{ ...state , category: state.category}
 
     case "Low_to_High":
         return {...state , priceSort: "low_to_high"}

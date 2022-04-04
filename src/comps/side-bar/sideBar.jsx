@@ -9,6 +9,8 @@ function SideBar ()
 const {state , dispatch} = useFilter()
 
   return(
+   
+
 <aside className="side-bar" >
 
 
@@ -52,47 +54,47 @@ const {state , dispatch} = useFilter()
     <div className="filter-title">CATEGORIES</div>
 
     <div className="filter-list">
-      <label for="cbox-1"
-        ><input id="cat-1" name="checkbox" type="checkbox" />ALL</label
-      >
+     
       <label for="cbox-2"
         ><input
           id="cat-2"
-          name="checkbox"
+          name="categories"
           type="checkbox"
-        />Medicenes</label
+          checked={state.category.include("Medicines")}  
+          value={state.category} 
+          onClick={() => dispatch({type: "category" , payload: "Medicines"}) }
+        />Medicines</label
       ><label for="cbox-3"
         ><input
           id="cat-3"
-          name="checkbox"
+          name="categories"
           type="checkbox"
+          checked={state.category.include("Med-Tech")}
+          value={state.category} 
+          onClick={() => dispatch({type: "category" , payload: "Med-Tech"}) }
         />Med-Tech</label
       ><label for="cbox-4"
         ><input
           id="cat-4"
-          name="checkbox"
+          name="categories"
           type="checkbox"
+
+
         />Self-Testing Kits</label
       ><label for="cbox-5"
         ><input
           id="cat-5"
-          name="checkbox"
+          name="categories"
           type="checkbox"
+          checked={state.category.include("Rehab-Kits")}
+          value={state.category} 
+          onClick={() => dispatch({type: "category" , payload: "Rehab-Kits"}) }
         />Rehab-Kits</label
       >
     </div>
   </div>
 
-  <div className="filter-component">
-    <div className="filter-title">AVAILABILITY</div>
 
-    <div className="filter-list">
-      <label for="avail-box">
-        <input type="checkbox" name="stock" id="avail-box" />
-        Include Out Of Stock
-      </label>
-    </div>
-  </div>
 
 
   <div className="filter-component">
@@ -100,9 +102,10 @@ const {state , dispatch} = useFilter()
 
     <div className="filter-list">
       <label for="rating-box">
-        0<div className="glowing-star"><i className="fi-xnsuxl-star-solid"></i></div>
-        <input type="range" name="rating" id="rating-box" />
-        5<div className="glowing-star"><i className="fi-xnsuxl-star-solid"></i></div>
+        0 <div className="glowing-star">⭐ </div>
+        <input type="range" name="rating" id="rating-box" min="1" max="5" 
+        step="1" value={state.rating} onClick={ (e) => dispatch({ type: "rating_range" ,payload: e.target.value}) } />
+        5 <div className="glowing-star">⭐ </div>
       </label>
     </div>
   </div>
@@ -112,8 +115,8 @@ const {state , dispatch} = useFilter()
     <div className="filter-title"></div>
 
     <div className="filter-list">
-      <a href="http://" className="nav-links"> <strong>Clear Filter</strong> </a>
 
+      <button className="btn-cart btn" onClick={ () => dispatch({ type:"clear"})}>Clear Filter</button>
 
     </div>
   </div>
@@ -123,8 +126,18 @@ const {state , dispatch} = useFilter()
 </aside>
 
 
-  )
+ )
 
 }
 
 export {SideBar};
+
+
+
+{/* <label for="cbox-1"
+        ><input id="cat-1" name="checkbox" type="checkbox" 
+        checked={true}  
+        value={state.category} 
+        onClick={() => dispatch({type: "all"}) }/>
+     
+         ALL </label> */}
