@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react/cjs/react.production.min";
+import { createContext, useContext, useReducer } from "react";
 
 
 const defaultValue = null;
@@ -14,12 +14,7 @@ const filterReducerFn = (state , action) =>
 {
     switch(action.type)
     {
-case "category":
-    return{ ...state , category: state.category.include(action.payload) ? state.category.filter((item) => item !== action.payload) : [ ...state.category, action.payload] }
 
-
-case "all":
-    return{ ...state , category: state.category}
 
     case "Low_to_High":
         return {...state , priceSort: "low_to_high"}
@@ -28,25 +23,38 @@ case "all":
         case "High_to_Low":
             return {...state , priceSort: "high_to_low"}
 
+
+
 case "rating_range":
     return { ...state , rating: action.payload}
 
- 
+ case "category":
+    return{ ...state , category: state.category.include(action.payload) ? state.category.filter( (item) => item !== action.payload) : [...state.category, action.payload], }
+
 
     case "clear":
-        return{ ...state ,category: "",
-        priceSort: [],
-        rating: 1,}
+        return{   category: [ ],
+            priceSort: " " ,
+            rating: "",
+        }
+
+        default:
+            return{ category:[ ],
+            priceSort:" ",
+            rating: " ", }
 
     }
+
+ 
+
 }
 
 
 const preliminaryValues = 
 {
-    category: "",
-    priceSort: [],
-    rating: 1,
+    category: [ ],
+    priceSort: " " ,
+    rating:" 1",
 
 }
 

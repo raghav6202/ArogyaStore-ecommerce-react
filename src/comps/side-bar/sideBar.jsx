@@ -28,7 +28,7 @@ const {state , dispatch} = useFilter()
           id="radio-1"
           checked={state.priceSort === "low_to_high"}
           value={state.priceSort}
-          onClick={() => dispatch( {type:"Low_to_High", payload: null,})}
+          onChange={() => dispatch( {type:"Low_to_High", payload: null,})}
         />
         Low To High
       </label>
@@ -41,7 +41,7 @@ const {state , dispatch} = useFilter()
           id="radio-2"
           checked={state.priceSort === "high_to_low" }
           value={state.priceSort}
-          onClick={() => dispatch({type:"High_to_Low" , payload: null,})}
+          onChange={() => dispatch({type:"High_to_Low" , payload: null,})}
         />
         High To Low
       </label>
@@ -60,18 +60,16 @@ const {state , dispatch} = useFilter()
           id="cat-2"
           name="categories"
           type="checkbox"
-          checked={state.category.include("Medicines")}  
-          value={state.category} 
-          onClick={() => dispatch({type: "category" , payload: "Medicines"}) }
+          checked={state.category.includes("medicines")}  
+          onChange={() => dispatch({type:"category" , payload: "medicines",}) }
         />Medicines</label
       ><label for="cbox-3"
         ><input
           id="cat-3"
           name="categories"
           type="checkbox"
-          checked={state.category.include("Med-Tech")}
-          value={state.category} 
-          onClick={() => dispatch({type: "category" , payload: "Med-Tech"}) }
+          checked={state.category.includes("medtech")}
+          onChange={() => dispatch({type:"category" , payload: "medtech",}) }
         />Med-Tech</label
       ><label for="cbox-4"
         ><input
@@ -86,10 +84,9 @@ const {state , dispatch} = useFilter()
           id="cat-5"
           name="categories"
           type="checkbox"
-          checked={state.category.include("Rehab-Kits")}
-          value={state.category} 
-          onClick={() => dispatch({type: "category" , payload: "Rehab-Kits"}) }
-        />Rehab-Kits</label
+          checked={state.category.includes("rehab")}
+          onChange={() => dispatch({ type: "category", payload: "rehab", }) }
+        />Rehab</label
       >
     </div>
   </div>
@@ -101,10 +98,10 @@ const {state , dispatch} = useFilter()
     <div className="filter-title">Ratings</div>
 
     <div className="filter-list">
-      <label for="rating-box">
+      <label  for="rating-box">
         0 <div className="glowing-star">⭐ </div>
-        <input type="range" name="rating" id="rating-box" min="1" max="5" 
-        step="1" value={state.rating} onClick={ (e) => dispatch({ type: "rating_range" ,payload: e.target.value}) } />
+        <input  type="range" name="rating" id="rating-box" min="1" max="5" 
+        step="1" value={state.rating} onChange={ (e) => dispatch({ type: "rating_range" , payload: e.target.value}) } />
         5 <div className="glowing-star">⭐ </div>
       </label>
     </div>
@@ -133,11 +130,3 @@ const {state , dispatch} = useFilter()
 export {SideBar};
 
 
-
-{/* <label for="cbox-1"
-        ><input id="cat-1" name="checkbox" type="checkbox" 
-        checked={true}  
-        value={state.category} 
-        onClick={() => dispatch({type: "all"}) }/>
-     
-         ALL </label> */}

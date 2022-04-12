@@ -29,29 +29,38 @@ const ProductListing = ()  => {
     }
 
 
-const ratingFilter = (products, rating) =>
+const ratingFilter = (products, ratings) =>
 {
   
-    return( products.filter((thing) => thing.rating >= rating) )
+    return( products.filter((input) => input.rating >= ratings) );
  
 
 }
 
 
-const categoryFilter = ( products , catgs) =>
+const categoryFilter = ( products , categories) =>
 {
-    if(catgs.length > 0)
+    console.log("category length", categories.length)
+    if(categories.length !== 0)
     {
-        return ( products.filter( (item) => catgs.include((item)))
-        )
+       
+    return ( products.filter( (item) => categories.includes(item.categoryName))
+    )
     }
+    else
+    {
+
+   
     return products;
 }
 
 
+}
 
-const productFilter = ratingFilter( categoryFilter( priceFilter( [...itemList] , state.priceSort ) , state.category ) , state.rating)
-console.log(priceFilter)  
+
+
+const productFilter = ratingFilter(categoryFilter(priceFilter([...itemList], state.priceSort),state.category),state.rating );
+console.log("product filter",productFilter)  
 
 return ( <main className="product-display-container">
 
@@ -62,23 +71,24 @@ return ( <main className="product-display-container">
 
               
 
-                { itemList.map( ({title , seller ,price,categoryName,image,rating}) => 
-                { 
-                    return(
-                        <div className="ecomm vertical-card">
-                    <div className="vertical-card-image">
-                        <img
-                            src={image}
-                            alt="card-pic" />
-                    </div><div className="vertical-badge">{rating} ⭐</div><button className="close-btn">
+                { productFilter.map( ({title , seller ,price,categoryName,image,rating}) => (
+                    <div className="ecomm vertical-card">
+                        <div className="vertical-card-image">
+                            < img 
+                                src={image}
+                                alt="card-pic" />
+                        </div><div className="vertical-badge">{rating} ⭐</div><button className="close-btn">
                             <i className="fi-xwluxl-heart-wide"></i>
                         </button><div className="card-heading">{title}</div>
+                        <div className="card-text">Category:{categoryName}</div>
                         <div className="card-text">Sold By:{seller}</div>
                         <div className="card-price">₹.{price}</div>
                         <button className="btn-cart btn">ADD TO CART</button>
-                        </div>
-         
-         )} )} 
+                    </div>
+
+
+                ) )
+        } 
 
 
     
