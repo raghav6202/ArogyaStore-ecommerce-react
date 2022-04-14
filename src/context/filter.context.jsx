@@ -29,7 +29,7 @@ case "rating_range":
     return { ...state , rating: action.payload}
 
  case "category":
-    return{ ...state , category: state.category.include(action.payload) ? state.category.filter( (item) => item !== action.payload) : [...state.category, action.payload], }
+    return{ ...state , category: state.category.includes(action.payload) ? state.category.filter( (item) => item !== action.payload) : [...state.category, action.payload], }
 
 
     case "clear":

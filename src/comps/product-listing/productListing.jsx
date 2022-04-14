@@ -77,13 +77,15 @@ return ( <main className="product-display-container">
                             < img 
                                 src={image}
                                 alt="card-pic" />
-                        </div><div className="vertical-badge">{rating} ⭐</div><button className="close-btn">
-                            <i className="fi-xwluxl-heart-wide"></i>
-                        </button><div className="card-heading">{title}</div>
+                        </div><div className="vertical-badge">{rating} ⭐</div>
+                        <button className="close-btn" > ❤️  </button> 
+                   
+                 <div className="card-heading">{title}</div>
                         <div className="card-text">Category:{categoryName}</div>
                         <div className="card-text">Sold By:{seller}</div>
                         <div className="card-price">₹.{price}</div>
                         <button className="btn-cart btn">ADD TO CART</button>
+                        
                     </div>
 
 

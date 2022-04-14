@@ -60,16 +60,18 @@ const {state , dispatch} = useFilter()
           id="cat-2"
           name="categories"
           type="checkbox"
+          value={state.category}
           checked={state.category.includes("medicines")}  
-          onChange={() => dispatch({type:"category" , payload: "medicines",}) }
+          onChange={( ) => dispatch({type:"category" , payload: "medicines",}) }
         />Medicines</label
       ><label for="cbox-3"
         ><input
           id="cat-3"
           name="categories"
           type="checkbox"
+        
           checked={state.category.includes("medtech")}
-          onChange={() => dispatch({type:"category" , payload: "medtech",}) }
+          onChange={( ) => dispatch({type:"category" , payload: "medtech",}) }
         />Med-Tech</label
       ><label for="cbox-4"
         ><input
@@ -85,7 +87,7 @@ const {state , dispatch} = useFilter()
           name="categories"
           type="checkbox"
           checked={state.category.includes("rehab")}
-          onChange={() => dispatch({ type: "category", payload: "rehab", }) }
+          onChange={( ) => dispatch({ type: "category", payload: "rehab", }) }
         />Rehab</label
       >
     </div>
