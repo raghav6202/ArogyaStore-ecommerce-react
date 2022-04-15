@@ -1,7 +1,8 @@
 import "./landingPage.css";
 
 import {useCategory} from "../../context/category.context";
-<script defer src="https://friconix.com/cdn/friconix-0.2248.js"> </script>
+import { FiArrowRight } from "react-icons/fi";
+import { FiChevronRight } from "react-icons/fi";
 const LandingPage = () =>
 {
 
@@ -26,7 +27,7 @@ return(
                 <div className="carousel-info">
                     <div className="carousel-heading">Celebrate Good Health with the ArogyaStore</div>
                     <div className="carousel-heading">FLAT 20% OFF USE CODE: MED20</div>
-                    <a href="./listing-page/listing-page.html"> <button className="btn-carousel btn ">Shop Now ! <i className="fi-xnsrxl-chevron-solid"></i></button></a>
+                    <a href="./listing-page/listing-page.html"> <button className="btn-carousel btn ">Shop Now ! < FiArrowRight /></button></a>
                 </div>
 
             </div>
@@ -57,7 +58,7 @@ return(
                                 {description}
                             </div>
                             <div className="category-btn">
-                                <a href="./listing-page/listing-page.html"><button className="btn-carousel btn "><i className="fi-xnsrxl-chevron-solid"></i></button></a>
+                                <a href="./listing-page/listing-page.html"><button className="btn-carousel btn ">< FiChevronRight/></button></a>
                             </div>
 
 

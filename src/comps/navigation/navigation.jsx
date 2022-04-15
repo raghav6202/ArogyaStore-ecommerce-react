@@ -1,6 +1,8 @@
 
 import "./navigation.css"
-
+import { BsFillCartFill } from "react-icons/bs";
+import { BsFillSuitHeartFill } from "react-icons/bs";
+import { BsPeopleFill } from "react-icons/bs";
 const Nav = () =>
 {
 
@@ -22,9 +24,9 @@ return(
 
         <div className="nav-components">
 
-            <a href="./Authentication/login.html" className="nav-links active"> Login</a>
-            <a href="./Wishlist/wishlist.html" className="nav-links"><i className="fi-xnsuxl-heart-solid"></i> Whishlist</a>
-            <a href="./cart/cart-page.html" className="nav-links"><i className="fi-xwsuhl-shopping-cart-solid"></i> Cart</a>
+            <a href="./Authentication/login.html" className="nav-links active"><BsPeopleFill />  Login </a>
+            <a href="./Wishlist/wishlist.html" className="nav-links"><BsFillSuitHeartFill />  Whishlist  </a>
+            <a href="./cart/cart-page.html" className="nav-links"><BsFillCartFill />  Cart  </a>
 
 
         </div>
