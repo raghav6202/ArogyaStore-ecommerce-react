@@ -7,7 +7,7 @@ const LandingPage = () =>
 {
 
 const { categoryList, setCategory } = useCategory()
-console.log("category: " , categoryList)
+
 
 
 

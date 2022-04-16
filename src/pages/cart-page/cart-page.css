@@ -1,0 +1,69 @@
+@import url("https://jatayui.netlify.app/comp-lib.css");
+/* ---------comp-lib----- */
+
+@import url("./../landing-page/landingPage.css");
+:root {
+  --border-clr: black;
+}
+
+.cart-container {
+  border: none;
+  gap: 1.5rem;
+}
+
+.cart-quantity {
+  width: 6rem;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.quantity-btn .quantity-icon {
+   
+   
+  height: 1rem;
+  width: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.total-price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  margin-top: var(--standard-margin);
+}
+
+.total-price-details {
+  padding: 0.5rem;
+  margin: var(--standard-margin);
+  border: 2px solid var(--border-clr);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.total-price-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.total-price-item {
+  width: 100%;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+}

@@ -1,16 +1,20 @@
 import "./productListing.css"
 
+import { HiMinus,HiPlus } from "react-icons/hi";
 
 import { useProduct} from "./../../context/products.context.jsx"
 
 import { useFilter } from "../../context/filter.context.jsx"
 
+import { useCart } from "../../context/cart.context"
+
 const ProductListing = ()  => {
 
     const {itemList} = useProduct()
     
-
     const { state } = useFilter()
+
+    const { cartState , cartDispatch } = useCart()
 
     const priceFilter = (products, priceSort) =>
     {
@@ -71,7 +75,7 @@ return ( <main className="product-display-container">
 
               
 
-                { productFilter.map( ({title , seller ,price,categoryName,image,rating}) => (
+                { productFilter.map( ({id,title , seller ,price,categoryName,image,rating}) => (
                     <div className="ecomm vertical-card">
                         <div className="vertical-card-image">
                             < img 
@@ -84,8 +88,20 @@ return ( <main className="product-display-container">
                         <div className="card-text">Category:{categoryName}</div>
                         <div className="card-text">Sold By:{seller}</div>
                         <div className="card-price">₹.{price}</div>
-                        <button className="btn-cart btn">ADD TO CART</button>
-                        
+                        {cartState.cart.some( (prod) => prod.id === id )  ? (
+                            <button className="btn-cart btn"  onClick={() =>
+                                cartDispatch({
+                                  type: "navigate_to_cart",
+                                  payload: {id,title , seller ,price,categoryName,image,rating },
+                                })
+                              }> GO TO CART</button>) :
+                        ( <button className="btn-cart btn" onClick={() =>
+                            cartDispatch({
+                              type: "add_to_cart",
+                              payload: {id,title , seller ,price,categoryName,image,rating },
+                            })
+                          }>ADD TO CART</button>) 
+                    }
                     </div>
 
 
