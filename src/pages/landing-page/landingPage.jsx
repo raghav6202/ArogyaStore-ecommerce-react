@@ -1,8 +1,8 @@
 import "./landingPage.css";
 
 import {useCategory} from "../../context/category.context";
-import { FiArrowRight } from "react-icons/fi";
-import { FiChevronRight } from "react-icons/fi";
+import { FiArrowRight,FiChevronRight } from "react-icons/fi";
+
 const LandingPage = () =>
 {
 

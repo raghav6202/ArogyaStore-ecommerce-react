@@ -1,8 +1,7 @@
 
 import "./navigation.css"
-import { BsFillCartFill } from "react-icons/bs";
-import { BsFillSuitHeartFill } from "react-icons/bs";
-import { BsPeopleFill } from "react-icons/bs";
+import { BsFillCartFill,BsPeopleFill,BsFillSuitHeartFill } from "react-icons/bs";
+
 const Nav = () =>
 {
 
