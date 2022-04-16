@@ -3,15 +3,66 @@ import "./productListing.css"
 
 import { useProduct} from "./../../context/products.context.jsx"
 
+import { useFilter } from "../../context/filter.context.jsx"
 
 const ProductListing = ()  => {
 
-    const {itemList, setItemList} = useProduct()
+    const {itemList} = useProduct()
+    
 
-    return (
+    const { state } = useFilter()
 
+    const priceFilter = (products, priceSort) =>
+    {
+        if(priceSort === "low_to_high")
+        {
+          return( products.sort((a,b) => a.price - b.price)
+          )
+        }
+
+        else if (priceSort === "high_to_low")
+        {
+            return( products.sort((a,b) => b.price - a.price))
+        }
+
+        return products;
+    }
+
+
+const ratingFilter = (products, ratings) =>
+{
+  
+    return( products.filter((input) => input.rating >= ratings) );
  
-    <main className="product-display-container">
+
+}
+
+
+const categoryFilter = ( products , categories) =>
+{
+    console.log("category length", categories.length)
+    if(categories.length !== 0)
+    {
+       
+    return ( products.filter( (item) => categories.includes(item.categoryName))
+    )
+    }
+    else
+    {
+
+   
+    return products;
+}
+
+
+}
+
+
+
+const productFilter = ratingFilter(categoryFilter(priceFilter([...itemList], state.priceSort),state.category),state.rating );
+console.log("product filter",productFilter)  
+
+return ( <main className="product-display-container">
 
 
         <div className="product-display-component">
@@ -20,23 +71,26 @@ const ProductListing = ()  => {
 
               
 
-                { itemList.map( ({title , seller ,price,categoryName,image,rating}) => 
-                { 
-                    return(
-                        <div className="ecomm vertical-card">
-                    <div className="vertical-card-image">
-                        <img
-                            src={image}
-                            alt="card-pic" />
-                    </div><div className="vertical-badge">{rating} ⭐</div><button className="close-btn">
-                            <i className="fi-xwluxl-heart-wide"></i>
-                        </button><div className="card-heading">{title}</div>
+                { productFilter.map( ({title , seller ,price,categoryName,image,rating}) => (
+                    <div className="ecomm vertical-card">
+                        <div className="vertical-card-image">
+                            < img 
+                                src={image}
+                                alt="card-pic" />
+                        </div><div className="vertical-badge">{rating} ⭐</div>
+                        <button className="close-btn" > ❤️  </button> 
+                   
+                 <div className="card-heading">{title}</div>
+                        <div className="card-text">Category:{categoryName}</div>
                         <div className="card-text">Sold By:{seller}</div>
                         <div className="card-price">₹.{price}</div>
                         <button className="btn-cart btn">ADD TO CART</button>
-                        </div>
-         
-         )} )} 
+                        
+                    </div>
+
+
+                ) )
+        } 
 
 
     
