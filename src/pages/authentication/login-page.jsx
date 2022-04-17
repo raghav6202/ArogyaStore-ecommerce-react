@@ -4,7 +4,7 @@ const LogInPage = () =>
 {
 
 
-    return( <div class="login-page-conatiner">
+    return(   <body><div class="login-page-conatiner">
     <div class="login-modal form-container component-display-container">
       <form action="" class="login-form">
         <div class="login-fields input-batch ecomm-sub-container">
@@ -52,7 +52,7 @@ const LogInPage = () =>
       </form>
     </div>
   </div>
-
+  </body>
 
 
 

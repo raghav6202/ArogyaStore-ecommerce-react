@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { BsFillCartFill } from "react-icons/bs";
 import { BsFillSuitHeartFill,BsSearch } from "react-icons/bs";
 import { BsPeopleFill } from "react-icons/bs";
+
 const Nav = () =>
 {
 
@@ -11,7 +12,7 @@ return(
 <nav className="nav-bar">
 
         <div className="nav-logo-name">
-            <img className="ecom-logo" src="src\comps\navigation\arogyaLogo.png" alt="logo" />
+            <img className="ecom-logo" src="images/arogyaLogo.png" alt="logo" />
             <Link className="ecom-heading" to="/"> <span className="primary-color">Arogya</span><span
                 className="secondary-color">Store</span>  </Link>
         </div>

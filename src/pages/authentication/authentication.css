@@ -11,6 +11,7 @@
   align-items: center;
   margin: 0%;
   padding: 0%;
+  width: 90%;
 }
 
 .login-modal {
@@ -18,6 +19,7 @@
   margin: var(--standard-margin);
   border: none;
   width: 80%;
+ 
 }
 
 .login-sub-heading {
