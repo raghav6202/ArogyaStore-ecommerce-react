@@ -1,5 +1,5 @@
 import "./landingPage.css";
-
+import { Link } from "react-router-dom";
 import {useCategory} from "../../context/category.context";
 import { FiArrowRight } from "react-icons/fi";
 import { FiChevronRight } from "react-icons/fi";
@@ -27,7 +27,8 @@ return(
                 <div className="carousel-info">
                     <div className="carousel-heading">Celebrate Good Health with the ArogyaStore</div>
                     <div className="carousel-heading">FLAT 20% OFF USE CODE: MED20</div>
-                    <a href="./listing-page/listing-page.html"> <button className="btn-carousel btn ">Shop Now ! < FiArrowRight /></button></a>
+                    <Link to="/product"> <button className="btn-carousel btn ">Shop Now ! < FiArrowRight /></button></Link>
+                  
                 </div>
 
             </div>
@@ -68,24 +69,7 @@ return(
                 })}
 
         </div>
-        <footer className="ecom-footer footer-container">
-
-            <div className="sub-caption">Developed with ❤️ By Raghav Chandra V S </div>
-
-            <div className="footer-icons">
-
-
-                <a href="https://github.com/raghav6202" className="small-icons"><i className="fi-xnsuxl-github"></i></a>
-
-                <a href="https://twitter.com/r_a___v" className="small-icons"><i className="fi-xnsuxl-twitter-solid"></i></a>
-
-                <a href="https://www.linkedin.com/in/raghav-chandra-vs-33575218b/" className="small-icons">Linkedin</a>
-
-
-            </div>
-
-
-        </footer></>
+       </>
 
         
 

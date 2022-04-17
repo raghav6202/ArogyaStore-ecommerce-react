@@ -1,8 +1,12 @@
 
+@import url("https://jatayui.netlify.app/comp-lib.css");
+/* ---------comp-lib----- */
 
 .App {
   text-align: center;
   position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .App-logo {

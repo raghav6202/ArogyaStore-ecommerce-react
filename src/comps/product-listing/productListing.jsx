@@ -1,6 +1,6 @@
 import "./productListing.css"
+import { Link } from "react-router-dom";
 
-import { HiMinus,HiPlus } from "react-icons/hi";
 
 import { useProduct} from "./../../context/products.context.jsx"
 
@@ -94,7 +94,7 @@ return ( <main className="product-display-container">
                                   type: "navigate_to_cart",
                                   payload: {id,title , seller ,price,categoryName,image,rating },
                                 })
-                              }> GO TO CART</button>) :
+                              }> <Link className="cart-link" to="/cart"> GO TO CART  </Link> </button>) :
                         ( <button className="btn-cart btn" onClick={() =>
                             cartDispatch({
                               type: "add_to_cart",

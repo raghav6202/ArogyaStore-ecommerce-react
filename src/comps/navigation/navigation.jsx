@@ -1,8 +1,10 @@
 
-import "./navigation.css"
+import "./navigation.css";
+import { Link } from "react-router-dom";
 import { BsFillCartFill } from "react-icons/bs";
-import { BsFillSuitHeartFill } from "react-icons/bs";
+import { BsFillSuitHeartFill,BsSearch } from "react-icons/bs";
 import { BsPeopleFill } from "react-icons/bs";
+
 const Nav = () =>
 {
 
@@ -10,24 +12,23 @@ return(
 <nav className="nav-bar">
 
         <div className="nav-logo-name">
-            <img className="ecom-logo" src="images\Health people abstract logo (1).png" alt="logo" />
-            <a className="ecom-heading" href="index.html"> <span className="primary-color">Arogya</span><span
-                className="secondary-color">Store</span> </a>
+            <img className="ecom-logo" src="images/arogyaLogo.png" alt="logo" />
+            <Link className="ecom-heading" to="/"> <span className="primary-color">Arogya</span><span
+                className="secondary-color">Store</span>  </Link>
         </div>
 
 
         <div className="nav-search">
-            <button type="submit" className="small-btn"><i className="fi-xnsuhl-search"></i></button>
+            <button type="submit" className="small-btn"><BsSearch /></button>
             <input className="search-bar" type="search" placeholder="Search" value="" />
         </div>
 
 
         <div className="nav-components">
-
-            <a href="./Authentication/login.html" className="nav-links active"><BsPeopleFill />  Login </a>
-            <a href="./Wishlist/wishlist.html" className="nav-links"><BsFillSuitHeartFill />  Whishlist  </a>
-            <a href="./cart/cart-page.html" className="nav-links"><BsFillCartFill />  Cart  </a>
-
+<Link className="nav-links active" to="/login" > <BsPeopleFill />  Login </Link>
+<Link className="nav-links active" to="/wishlist" > <BsFillSuitHeartFill />  Whishlist</Link>
+<Link className="nav-links active" to="/cart" > <BsFillCartFill />  Cart  </Link>     
+          
 
         </div>
 
