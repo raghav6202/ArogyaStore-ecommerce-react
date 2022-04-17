@@ -1,4 +1,5 @@
 import "./cart-items.css";
+import { Link } from "react-router-dom";
 import { BsTrash } from "react-icons/bs";
 import { HiPlus, HiMinus } from "react-icons/hi";
 import { useCart } from "./../../context/cart.context";
