@@ -94,7 +94,7 @@ return ( <main className="product-display-container">
                                   type: "navigate_to_cart",
                                   payload: {id,title , seller ,price,categoryName,image,rating },
                                 })
-                              }> <Link to="/cart"> GO TO CART </Link>  </button>) :
+                              }> <Link className="cart-link" to="/cart"> GO TO CART  </Link> </button>) :
                         ( <button className="btn-cart btn" onClick={() =>
                             cartDispatch({
                               type: "add_to_cart",
